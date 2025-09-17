@@ -1,0 +1,10 @@
+# Use the global section for credentials
+global:
+  logzioLogsToken: "XRngzbKvWiDiWVjseDALDEPJGtoqkItT"
+  logzioRegion: "us-east-1"
+
+# Enable the daemonset collector which is responsible for logs
+daemonsetCollector:
+  enabled: true
+  containerLogs:
+    enabled: true

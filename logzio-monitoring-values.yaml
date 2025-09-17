@@ -1,0 +1,15 @@
+global:
+  logzioRegion: "us-east-1" # Make sure this is your correct region
+  logzioLogsToken: "XRngzbKvWiDiWVjseDALDEPJGtoqkItT"
+  logzioMetricsToken: "FjSvckyvrQFGjNtXegttqRJQJUCZItoZ" # Add your metrics token here
+
+logs:
+  enabled: true
+
+# This section configures the sub-chart for metrics
+logzio-k8s-telemetry:
+  metrics:
+    enabled: true
+  k8sObjectsConfig:
+    enabled: true # Collects logs about K8s events
+
