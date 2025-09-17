@@ -53,9 +53,7 @@ After deploying my application to Kubernetes, I couldn't access it. So I had Gem
 - **Investigation**: I used kubectl logs hello-app-deployment-78d9b7d7cd-vb6hp to inspect the container logs. Which Gemini suggested as the first step in debugging a pod-level issue. 
 - **Discoveries & Fixes**: 
 1. **Syntax Errors**: The logs revealed several Python SyntaxErrors caused by invisible non-printable characters. I fixed these by manually retyping the problematic lines. 
-1. **Dependency Conflict**: After fixing the syntax, a new Error appeared. This was due to a version conflict between Flask and its dependency, Werkzeug. I resolved this by pinning both libraries to compatible versions in 
-
-   requirements.txt. 
+1. **Dependency Conflict**: After fixing the syntax, a new Error appeared. This was due to a version conflict between Flask and its dependency, Werkzeug. I resolved this by pinning both libraries to compatible versions in requirements.txt. 
 
 With each code fix, I went through the full CI/CD cycle: **rebuild** the Docker image, **push** it to Docker Hub, and trigger a **rolling restart** of the Kubernetes deployment with kubectl rollout restart deployment <deployment-name>.
 ### **Logz.io Collector: Finding the Right Chart** 
