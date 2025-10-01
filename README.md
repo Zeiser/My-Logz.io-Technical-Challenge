@@ -1,4 +1,4 @@
-# **Logz.io CSE Technical Assessment: "Hello, (Observ) World!"** 
+# **Logz.io Technical Challenge: "Hello, (Observ) World!"** 
 This project demonstrates a complete workflow for deploying a containerized application to Kubernetes, shipping its telemetry data to Logz.io, and deriving value from that data through alerts and dashboards. 
 
 This document details the setup, my troubleshooting journey, key decisions, and how to reproduce the project. 
